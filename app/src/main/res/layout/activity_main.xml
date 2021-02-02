@@ -7,30 +7,20 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
+    <fragment
+        android:id="@+id/buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10pt"
-        android:layout_marginLeft="10pt"
-        android:layout_marginRight="10pt"
-        android:layout_marginBottom="2pt"
-        android:text="Button" />
+        android:name="ru.itcube.myapplication.ButtonsFragment"
+        tools:layout="@layout/fragment_buttons"/>
 
-    <Button
-        android:id="@+id/camera"
+    <fragment
+        android:id="@+id/picture"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2pt"
-        android:layout_marginLeft="10pt"
-        android:layout_marginRight="10pt"
-        android:layout_marginBottom="10pt"
-        android:text="Button" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:name="ru.itcube.myapplication.ImageFragment"
+        tools:layout="@layout/fragment_image"/>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_margin="10pt"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-         />
+
 </LinearLayout>
