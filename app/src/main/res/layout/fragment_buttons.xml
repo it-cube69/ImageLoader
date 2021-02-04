@@ -6,21 +6,23 @@
     <Button
         android:id="@+id/gallery"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
         android:layout_marginTop="10pt"
         android:layout_marginLeft="10pt"
         android:layout_marginRight="10pt"
         android:layout_marginBottom="2pt"
-        android:text="Button" />
+        android:text="Gallery" />
 
     <Button
         android:id="@+id/camera"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
         android:layout_marginTop="2pt"
         android:layout_marginLeft="10pt"
         android:layout_marginRight="10pt"
         android:layout_marginBottom="10pt"
-        android:text="Button" />
+        android:text="Camera" />
 
 </LinearLayout>

@@ -95,7 +95,7 @@ public class ButtonsFragment extends Fragment {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), uri);
                 FragmentManager fragmentManager = getFragmentManager();
                 ImageFragment imageFragment = (ImageFragment)fragmentManager.findFragmentById(R.id.picture);
-                imageFragment.loadPicture(bitmap);
+                updatePicture(uri, bitmap, imageFragment);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -103,7 +103,21 @@ public class ButtonsFragment extends Fragment {
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
             FragmentManager fragmentManager = getFragmentManager();
             ImageFragment imageFragment = (ImageFragment)fragmentManager.findFragmentById(R.id.picture);
+            updatePicture(null, bitmap, imageFragment);
+        }
+    }
+
+    private void updatePicture(Uri uri, Bitmap bitmap, ImageFragment imageFragment) {
+        if (imageFragment != null && imageFragment.isInLayout() && bitmap != null) {
             imageFragment.loadPicture(bitmap);
+        } else {
+            Intent intent = new Intent(getActivity().getApplicationContext(), ImageActivity.class);
+            if (uri != null) {
+                intent.putExtra("uri", uri);
+            } else {
+                intent.putExtra("picture", bitmap);
+            }
+            startActivity(intent);
         }
     }
 }

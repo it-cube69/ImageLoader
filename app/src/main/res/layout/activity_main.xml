@@ -10,17 +10,17 @@
     <fragment
         android:id="@+id/buttons"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:name="ru.itcube.myapplication.ButtonsFragment"
         tools:layout="@layout/fragment_buttons"/>
 
-    <fragment
-        android:id="@+id/picture"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:name="ru.itcube.myapplication.ImageFragment"
-        tools:layout="@layout/fragment_image"/>
+<!--    <fragment-->
+<!--        android:id="@+id/picture"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:name="ru.itcube.myapplication.ImageFragment"-->
+<!--        tools:layout="@layout/fragment_image"/>-->
 
 
 </LinearLayout>
